@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        table {
+            width: 100%;
+            background-color: antiquewhite;
+        }
+        .table {
+            background-color: aqua;
+        }
+        #table {
+            background-color: beige;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Precious' web</title>
 </head>
 <body>
     <h1>Table Practice</h1>
-    <table>
+    <table border="1">
+        <thead>
+            <th>Letter</th>
+            <th>Name</th>
+            <th>Place</th>
+            <th>Food</th>
+            <th>Animal</th>
+            <th>Thing</th>
+            <th>True/False</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>Aminat</td>
+                <td>America</td>
+                <td>Abacha</td>
+                <td>Antelope</td>
+                <td>Anchor</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Bola</td>
+                <td>Bermuda</td>
+                <td>Banga</td>
+                <td>Bat</td>
+                <td>Bowl</td>
+                <td><input type="checkbox"></td>
+               
+            </tr>
+        
+        </tbody>
+    </table>
+    <table border="1" class="table" id="table">
         <thead>
             <th>Letter</th>
             <th>Name</th>
