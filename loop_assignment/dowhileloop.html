@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Do while loop</title>
+  </head>
+  <body>
+    <h1 class="m-5">Welcome Precious!, Here are your available classes</h1>
+
+    <table id="inMest" class="table table-bordered mt-5"></table>
+
+    <script>
+      // Data
+      const queries = [
+        {
+          id: 1,
+          student: "Genesis",
+          query: "Permission to absent from tech class",
+          status: "APPROVED",
+        },
+        {
+          id: 2,
+          student: "Nunya",
+          query: "Permission to Absa Hackathon",
+          status: "APPROVED",
+        },
+        {
+          id: 3,
+          student: "Fleeur",
+          query: "Permission to shoot film",
+          status: "DECLINED",
+        },
+        {
+          id: 4,
+          student: "Delight",
+          query: "Need some delightful time to cool off",
+          status: "DECLINED",
+        },
+        {
+          id: 5,
+          student: "Sila",
+          query: "Permission to participate in Absa Hackathon",
+          status: "PENDING",
+        },
+      ];
+
+      // Function
+
+      const onLoadinMest = () => {
+        let table = document.getElementById("inMest");
+        let tableHead = document.createElement("thead");
+        let tableBody = document.createElement("tbody");
+        let tableHeadRow = document.createElement("tr");
+        let tableHeadRowData = document.createElement("th");
+        let tableHeadRowData2 = document.createElement("th");
+        let tableHeadRowData3 = document.createElement("th");
+        let tableHeadRowData4 = document.createElement("th");
+
+        tableHeadRowData.textContent = "Student";
+        tableHeadRowData2.textContent = "Query";
+        tableHeadRowData3.textContent = "Status";
+        tableHeadRowData4.textContent = "Action";
+
+        tableHeadRow.appendChild(tableHeadRowData);
+        tableHeadRow.appendChild(tableHeadRowData2);
+        tableHeadRow.appendChild(tableHeadRowData3);
+        tableHeadRow.appendChild(tableHeadRowData4);
+
+        tableHead.appendChild(tableHeadRow);
+
+        table.appendChild(tableHead);
+        table.appendChild(tableBody);
+
+        let i = 0;
+        do {
+          let tableBodyRow = document.createElement("tr");
+          let tableBodyRowData = document.createElement("td");
+          let tableBodyRowData2 = document.createElement("td");
+          let tableBodyRowData3 = document.createElement("td");
+          let tableBodyRowData4 = document.createElement("td");
+
+          tableBodyRowData.textContent = queries[i].student;
+          tableBodyRowData2.textContent = queries[i].query;
+          tableBodyRowData3.textContent = queries[i].status;
+          tableBodyRowData4.textContent = "Approve  Decline";
+
+          tableBodyRow.appendChild(tableBodyRowData);
+          tableBodyRow.appendChild(tableBodyRowData2);
+          tableBodyRow.appendChild(tableBodyRowData3);
+          tableBodyRow.appendChild(tableBodyRowData4);
+
+          tableBody.appendChild(tableBodyRow);
+
+          i++;
+        } while (i < queries.length);
+      };
+
+      onLoadinMest();
+    </script>
+  </body>
+</html>
